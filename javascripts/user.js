@@ -19,7 +19,7 @@
         init();
     };
     app.controller("linksController", ["$scope", "linksService", "$timeout", linksController]);
-}(angular.module("appuserService
+}(angular.module("appuserService")));
 
 
 (function (app) {
