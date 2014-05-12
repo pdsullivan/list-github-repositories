@@ -1,10 +1,14 @@
 function UserCtrl($scope) {
   
   //$scope.User = $http.get('https://api.github.com/users/pdsullivan');
-  $http.get('https://api.github.com/users/pdsullivan').success(successCallback);
+
   
-  function successCallback (data){
-    $scope.User = data;
-  };
+  $http({method: 'GET', url: 'https://api.github.com/users/pdsullivan'}).
+    success(function(data, status, headers, config) {
+      $scope.User = data;
+    }).
+    error(function(data, status, headers, config) {
+      alert('error');
+    });
   
 }
