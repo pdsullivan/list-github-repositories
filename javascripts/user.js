@@ -18,7 +18,7 @@
         };
         init();
     };
-    app.controller("linksController", ["$scope", "linksService", "$timeout", linksController]);
+    app.controller("UserCtrl", ["$scope", "linksService", "$timeout", UserCtrl]);
 }(angular.module("app")));
 
 
