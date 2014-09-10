@@ -1,0 +1,54 @@
+﻿.topmessage {
+    position: absolute;
+    margin-top:0;
+    z-index: 1;
+}
+
+.main section .page_container {
+    position: relative;
+    top: 20%;
+    margin: 0 auto 0;
+    max-width: 1000px;
+    z-index: 3;
+}
+
+.work-thumbnail {
+    max-height: 231px;
+}
+.circular {
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(/Content/images/MeSmall.jpg) no-repeat;
+}
+
+.navbar-border-button{
+    font-size: 14px;
+    color: #fff !important;
+    background-color: transparent !important;
+    border-color: #fff !important;
+}
+
+.navbar-border-button:hover {
+    color: black !important;
+    background-color: white !important; 
+    border-color: #fff !important;
+}
+.twitter-follow-button {
+    width: 84px !important;
+}
+.twitter-timeline {
+    margin-top: 10px !important;
+}
+@media(max-width:650px){
+    .onepage-wrapper .ops-section { 
+        height:auto !important;
+    }
+    body {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+}
+
