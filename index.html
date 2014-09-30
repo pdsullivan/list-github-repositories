@@ -15,16 +15,17 @@
     <body  ng-controller="gitHubDataController">
 
         <div class="container">
-            <div class="well-sm">
-                <div class="">
-                    <h1>
-                        <span ng-hide="repoData"/>Loading...</span>
-                        <span />{{userData.name}}</span>
-                        <a href="{{userData.html_url}}">
-                            <small>{{userData.login}}</small> <span class="octicon octicon-octoface"></span>
-                        </a>
-                    </h1>
-                </div>
+            <div class="jumbotron">
+                <h1 class="text-center">
+                    <span ng-hide="repoData"/>Loading...</span>
+                    <span />{{userData.name}}</span>
+                    <br>
+                    <a href="{{userData.html_url}}" class="btn btn-default">
+                        <span class="octicon octicon-octoface"></span>
+                        {{userData.login}}                        
+                    </a>
+
+                </h1>
             </div>
 
             <div class="panel  panel-default">
@@ -33,7 +34,7 @@
                     <form class="form-inline">
                         <span>
                             <h4>Repos <span class="badge">{{repoData.length}}</span>
-                            <input ng-model="searchText" placeholder="find repo" class="form-control input-sm">
+                            <input ng-model="searchText" placeholder="Find a repo..." class="form-control input-sm">
                             </h4>
                         </span>
                     </form>
