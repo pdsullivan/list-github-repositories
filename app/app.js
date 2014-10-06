@@ -21,7 +21,9 @@ angular.module('app', [])
                 $scope.reposLoaded = true;
             });
 
-        $scope.predicate = '-updated_at'
+        $scope.predicate = '-updated_at';
+
+
 }]);
 
 

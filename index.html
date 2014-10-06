@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-        <title>Patrick Sullivan Github</title>
+        <title>Patrick Sullivan GitHub</title>
 
-        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="lib/custombootstrap.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="lib/octicons/octicons/octicons.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="lib/site.css" media="screen" title="no title" charset="utf-8">
@@ -15,7 +15,7 @@
     <body  ng-controller="gitHubDataController">
 
         <div class="container">
-            <div class="jumbotron">
+            <div class="">
                 <h1 class="text-center">
                     <span ng-hide="repoData"/>Loading...</span>
                     <span />{{userData.name}}</span>
@@ -41,7 +41,6 @@
 
                 </div>
                 <div class="panel-body">
-
                     <div class="list-group">
                         <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="list-group-item ">
                             <div class="row">
