@@ -9,22 +9,26 @@ angular.module('app', [])
 
         $scope.username = "pdsullivan";
 
-        $http.get("https://api.github.com/users/"+$scope.username)
-            .success(function(data) {
+        $http.get("https://api.github.com/users/" + $scope.username)
+            .success(function (data) {
                 $scope.userData = data;
-                $scope.userLoaded = true;
+                loadRepos();
             });
 
-        $http.get("https://api.github.com/users/"+$scope.username+"/repos")
-            .success(function(data){
-                $scope.repoData = data;
-                $scope.reposLoaded = true;
-            });
+        var loadRepos = function () {
+            $http.get($scope.userData.repos_url)
+                .success(function (data) {
+                    $scope.repoData = data;
+                });
+        };
+
 
         $scope.predicate = '-updated_at';
 
 
 }]);
+
+
 
 
 /*
